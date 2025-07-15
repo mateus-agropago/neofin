@@ -17,10 +17,10 @@ module Neofin
       end
 
       # Retrieves a specific billing by its number.
-      # @param billing_number [String, Integer] The unique identifier of the billing.
+      # @param integration_identifier [String] The unique identifier of the billing.
       # @return [Hash] The billing data.
-      def get(billing_number:)
-        get_request("#{RESOURCE_PATH}/#{billing_number}")
+      def get(integration_identifier:)
+        get_request("#{RESOURCE_PATH}/integration/#{integration_identifier}")
       end
 
       # Updates an existing billing.
